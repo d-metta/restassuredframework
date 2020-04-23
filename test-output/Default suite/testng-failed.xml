@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="helper.TestBodyParamsUtils">
+      <class name="restframeworktests.TC1RS_GetAllEmployees">
         <methods>
-          <include name="getTestCaseID"/>
+          <include name="logger"/>
+          <include name="checkStatusLine"/>
+          <include name="checkContentType"/>
+          <include name="checkResponseStatusCode"/>
+          <include name="getAllEmployees"/>
+          <include name="checkContentLength"/>
         </methods>
-      </class> <!-- helper.TestBodyParamsUtils -->
+      </class> <!-- restframeworktests.TC1RS_GetAllEmployees -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
