@@ -1,5 +1,6 @@
 package restframeworkmethods;
 
+import java.net.URI;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -10,10 +11,14 @@ import restframeworkbases.Testbase;
 
 public class SendRequestMethods extends Testbase{
 	
+	String uri;
+	String Path;
 	
 	public Response sendReqWithoutParams() {
+	
 		RestAssured.baseURI=uri;
 		httpRequest=RestAssured.given();		
+		
 		resposne=httpRequest.request(Method.GET,Path);	
 		return resposne;
 	}
